@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="hierarchy"/>
+    <item type="id" name="isexpand"/>
+    <item type="id" name="scrollview"/>
+
+</resources>

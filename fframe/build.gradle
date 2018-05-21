@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+ext {
+    // App dependencies
+    var = [
+            supportLibraryVersion: "26.+",
+            junitVersion         : "4.12",
+            retrofitVersion      : "2.2.0",
+            ok3Version           : "3.6.0",
+            daggerVersion        : "2.7",
+            rxjavaVersion        : "2.x.x",
+            rxAndroidVersion     : "2.0.2",
+            rxlifecycleVersion   : "2.2.1"
+    ]
+}
+android {
+    compileSdkVersion 24
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "2.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.squareup.retrofit2:retrofit:$var.retrofitVersion"
+    api "com.squareup.retrofit2:converter-gson:$var.retrofitVersion"
+    api "com.squareup.retrofit2:adapter-rxjava2:$var.retrofitVersion"
+    api "com.squareup.okhttp3:okhttp:$var.ok3Version"
+    api "com.squareup.okhttp3:logging-interceptor:$var.ok3Version"
+    api "io.reactivex.rxjava2:rxjava:$var.rxjavaVersion"
+    api "io.reactivex.rxjava2:rxandroid:$var.rxAndroidVersion"
+    //Rx性能优化
+    api "com.trello.rxlifecycle2:rxlifecycle:$var.rxlifecycleVersion"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:$var.rxlifecycleVersion"
+    api "com.google.dagger:dagger:$var.daggerVersion"
+    apply plugin: 'announce'
+    testImplementation "junit:junit:$var.junitVersion"
+    implementation 'com.android.support:appcompat-v7:24.2.1'
+}
