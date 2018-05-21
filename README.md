@@ -7,9 +7,23 @@ dagger2依赖注入
 
 # 如何使用
 
-**1. 项目下app的build.gradle中依赖：**
+**1. 根下app的build.gradle中依赖：**
+
 ````gradle
-implementation 'com.github.flyisme:FragmentMvpFramework:-SNAPSHOT'
+allprojects {
+		repositories {
+			...
+			maven { url 'https://www.jitpack.io' }
+		}
+	}
+````
+**1. 项目下app的build.gradle中依赖：**
+
+
+````gradle
+dependencies {
+	        implementation 'com.github.flyisme:FragmentMvpFramework:-SNAPSHOT'
+	}
 ````
 
 **2. Activity `extends` MvpActivity（继承自RxAppCompatActivity）
