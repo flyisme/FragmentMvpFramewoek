@@ -22,7 +22,8 @@ allprojects {
 
 ````gradle
 dependencies {
-	        implementation 'com.github.flyisme:FragmentMvpFramework:-SNAPSHOT'
+	        dependencies {
+	        implementation 'com.github.flyisme:FragmentMvpFramework:v1.1'
 	}
 ````
 
