@@ -31,7 +31,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     api "com.squareup.retrofit2:retrofit:$var.retrofitVersion"
     api "com.squareup.retrofit2:converter-gson:$var.retrofitVersion"
     api "com.squareup.retrofit2:adapter-rxjava2:$var.retrofitVersion"
