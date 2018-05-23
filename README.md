@@ -1,5 +1,6 @@
 # 自用MVP框架 支持单View多Presenter的绑定销毁。
-## 基于开源项目 .[Fragmentation](https://github.com/YoKeyword/Fragmentation/blob/master/README_CN.md)修改，集成了滑动关闭fragment以及切换动画。为"单Activity ＋ 多Fragment","多模块Activity + 多Fragment"架构而生，简化开发，轻松解决动画、嵌套、事务相关等问题。
+## 基于开源项目 .[Fragmentation](https://github.com/YoKeyword/Fragmentation/blob/master/README_CN.md)修改，集成了滑动关闭fragment以及切换动画。
+为"单Activity ＋ 多Fragment","多模块Activity + 多Fragment"架构而生，简化开发，轻松解决动画、嵌套、事务相关等问题。
 
 网络请求使用RxJava2+retrofit2。
 
