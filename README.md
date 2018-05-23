@@ -10,7 +10,7 @@ dagger2依赖注入
 
 # 如何使用
 
-**1. 根下app的build.gradle中依赖：**
+**1. 根目录下的build.gradle中依赖：**
 
 ````gradle
 allprojects {
@@ -20,7 +20,7 @@ allprojects {
 		}
 	}
 ````
-**1. 项目下app的build.gradle中依赖：**
+**1. 项目app的build.gradle中依赖：**
 
 
 ````gradle
