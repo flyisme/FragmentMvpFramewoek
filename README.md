@@ -26,7 +26,7 @@ allprojects {
 ````gradle
 dependencies {
 	        dependencies {
-	        implementation 'com.github.flyisme:FragmentMvpFramework:1.1.21'
+	        implementation 'com.github.flyisme:FragmentMvpFramework:master-SNAPSHOT'
 			//Dagger2注解依赖
 			annotationProcessor "com.google.dagger:dagger-compiler:2.7"
 	}
