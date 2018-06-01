@@ -3,6 +3,8 @@ package android.support.v4.app;
 
 import android.util.SparseArray;
 
+import com.huatugz.flycommen.framework.LogUtils;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -81,13 +83,15 @@ public class FragmentationHack {
         if (!(fragmentManager instanceof FragmentManagerImpl))
             return Collections.EMPTY_LIST;
         // For pre-25.4.0
-        if (sSupportLessThan25dot4) return fragmentManager.getFragments();
+        if (sSupportLessThan25dot4) {
+            return fragmentManager.getFragments();
+        }
 
         // For compat 25.4.0+
         try {
             FragmentManagerImpl fragmentManagerImpl = (FragmentManagerImpl) fragmentManager;
             // Since v4-25.4.0，mActive: ArrayList -> SparseArray
-            return getActiveList(fragmentManagerImpl.mActive);
+            return getActiveList(fragmentManagerImpl.getActiveFragments());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -95,7 +99,7 @@ public class FragmentationHack {
     }
 
     @SuppressWarnings("unchecked")
-    private static List<Fragment> getActiveList(SparseArray<Fragment> active) {
+    private static List<Fragment> getActiveList(List<Fragment> active) {
         if (active == null) {
             return Collections.EMPTY_LIST;
         }
